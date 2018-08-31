@@ -3,16 +3,20 @@ import superagent from 'superagent';
 
 class IndexAction {
     
-	fetchData() {
-		alert('Action Called');
- 		superagent.get('/data')
+	fetchingData() {
+		//alert('Action Called');
+ 		superagent.get('http://google.com')
 			//.set("X-Access-Token", this.accessToken)
 			.send()
 			.end((error, response) => {
-				alert('Super Agent Called');
+				this.fetchedData("Super Agent Called");
 			});
 
-		return 'Return fetchData';
+		return 'Fetching data';
+	}
+
+	fetchedData(msg){
+		return msg;
 	}
 }
 

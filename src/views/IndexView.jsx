@@ -3,7 +3,8 @@ import { Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import IndexAction from '../actions/IndexAction';
 import IndexStore from '../stores/IndexStore';
-
+import {PieChart} from 'react-easy-chart';
+ 
 class IndexView extends React.Component {
 
 	constructor(props) {
@@ -14,7 +15,7 @@ class IndexView extends React.Component {
 
 	componentDidMount() {
 		IndexStore.listen(this.onChange);
-		IndexAction.fetchData();
+		IndexAction.fetchingData();
 	}
 
 	componentWillUnmount() {
@@ -53,6 +54,11 @@ class IndexView extends React.Component {
     		<Button bsStyle="danger" onClick={this.onChange.bind(this)}>Hello World Danger</Button>
     		<Button bsStyle="primary">Hello World Primary</Button>
     		<Button bsStyle="success">Hello World Success</Button>
+        <PieChart  data={[
+      { key: 'A', value: 100 },
+      { key: 'B', value: 200 },
+      { key: 'C', value: 50 }
+    ]} />
     	</div>);
     }
 }

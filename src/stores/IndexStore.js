@@ -4,16 +4,14 @@ import IndexAction from '../actions/IndexAction';
 class IndexStore {
     
 	constructor() {
-		this.index = 'Not Yet';
+		this.index = 'Not Change Yet';
 		this.bindListeners({
-	      fetchCalled: IndexAction.fetchData
+	      dataFetched: IndexAction.fetchedData
 	    });
 	}
 
-	fetchCalled(test){
-		this.index = 'ANKIT';
-		alert(test);
-		alert('Store Called');
+	dataFetched(test){
+		this.index = test;
 	}
 }
 
