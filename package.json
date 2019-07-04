@@ -1,5 +1,5 @@
 {
-  "name": "client25",
+  "name": "React WEB APP",
   "version": "1.0.0",
   "description": "ReactJS Application",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "webpack -p"
   },
   "keywords": [],
-  "author": "Ankit Mehta  ankit@clienttether.com",
+  "author": "Ankit Mehta  a.mehta.1605@icloud.com",
   "license": "ISC",
   "dependencies": {
     "alt": "^0.18.6",
